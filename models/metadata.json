@@ -1,0 +1,396 @@
+{
+  "feature_columns": [
+    "pss_q1",
+    "pss_q2",
+    "pss_q3",
+    "pss_q4",
+    "pss_q5",
+    "pss_q6",
+    "pss_q7",
+    "pss_q8",
+    "pss_q9",
+    "pss_q10",
+    "pss_q11",
+    "pss_q12",
+    "pss_q13",
+    "pss_q14",
+    "isi_q1",
+    "isi_q2",
+    "isi_q3",
+    "isi_q4",
+    "isi_q5",
+    "isi_q6",
+    "isi_q7",
+    "gender",
+    "age",
+    "edu",
+    "smoke",
+    "drink"
+  ],
+  "pss_items": [
+    "pss_q1",
+    "pss_q2",
+    "pss_q3",
+    "pss_q4",
+    "pss_q5",
+    "pss_q6",
+    "pss_q7",
+    "pss_q8",
+    "pss_q9",
+    "pss_q10",
+    "pss_q11",
+    "pss_q12",
+    "pss_q13",
+    "pss_q14"
+  ],
+  "isi_items": [
+    "isi_q1",
+    "isi_q2",
+    "isi_q3",
+    "isi_q4",
+    "isi_q5",
+    "isi_q6",
+    "isi_q7"
+  ],
+  "demo_columns": [
+    "gender",
+    "age",
+    "edu",
+    "smoke",
+    "drink"
+  ],
+  "prevalence": {
+    "gad7": 0.02247653548493331,
+    "phq9": 0.054174213732916185
+  },
+  "n_total": 24292,
+  "targets": {
+    "gad7": {
+      "label": "GAD-7 (anxiety)",
+      "models": {
+        "RandomForest": {
+          "file": "gad7_RandomForest.joblib",
+          "threshold": 0.34503499498431456,
+          "metrics": {
+            "accuracy": 0.9475,
+            "balanced_accuracy": 0.9014,
+            "f1_macro": 0.6971,
+            "roc_auc": 0.9705,
+            "balanced_accuracy_tuned": 0.9054,
+            "f1_macro_tuned": 0.6454
+          },
+          "size_mb": 2.47
+        },
+        "LogisticRegression": {
+          "file": "gad7_LogisticRegression.joblib",
+          "threshold": 0.5145148524664188,
+          "metrics": {
+            "accuracy": 0.9181,
+            "balanced_accuracy": 0.9133,
+            "f1_macro": 0.6443,
+            "roc_auc": 0.9724,
+            "balanced_accuracy_tuned": 0.9057,
+            "f1_macro_tuned": 0.6465
+          },
+          "size_mb": 0.0
+        },
+        "SVM_RBF": {
+          "file": "gad7_SVM_RBF.joblib",
+          "threshold": 0.020494173564619727,
+          "metrics": {
+            "accuracy": 0.98,
+            "balanced_accuracy": 0.6671,
+            "f1_macro": 0.7113,
+            "roc_auc": 0.9248,
+            "balanced_accuracy_tuned": 0.8928,
+            "f1_macro_tuned": 0.6205
+          },
+          "size_mb": 0.07
+        }
+      },
+      "feature_importances": {
+        "pss_q3": 0.22705,
+        "pss_q1": 0.189,
+        "pss_q2": 0.17055,
+        "pss_q14": 0.07784,
+        "isi_q4": 0.05175,
+        "isi_q1": 0.03761,
+        "isi_q7": 0.03492,
+        "pss_q11": 0.03164,
+        "isi_q2": 0.02508,
+        "isi_q5": 0.02086,
+        "pss_q7": 0.02045,
+        "isi_q6": 0.01473,
+        "pss_q8": 0.0144,
+        "isi_q3": 0.01345,
+        "age": 0.01182,
+        "pss_q6": 0.00953,
+        "pss_q9": 0.00824,
+        "pss_q12": 0.00648,
+        "pss_q10": 0.00563,
+        "pss_q13": 0.00545,
+        "pss_q5": 0.00543,
+        "drink": 0.00525,
+        "pss_q4": 0.00512,
+        "smoke": 0.00308,
+        "edu": 0.00245,
+        "gender": 0.0022
+      },
+      "default_model": "RandomForest"
+    },
+    "phq9": {
+      "label": "PHQ-9 (depression)",
+      "models": {
+        "RandomForest": {
+          "file": "phq9_RandomForest.joblib",
+          "threshold": 0.345844679283202,
+          "metrics": {
+            "accuracy": 0.8905,
+            "balanced_accuracy": 0.8722,
+            "f1_macro": 0.6981,
+            "roc_auc": 0.9456,
+            "balanced_accuracy_tuned": 0.8779,
+            "f1_macro_tuned": 0.6401
+          },
+          "size_mb": 2.18
+        },
+        "LogisticRegression": {
+          "file": "phq9_LogisticRegression.joblib",
+          "threshold": 0.4145383857397952,
+          "metrics": {
+            "accuracy": 0.8829,
+            "balanced_accuracy": 0.8807,
+            "f1_macro": 0.6913,
+            "roc_auc": 0.9476,
+            "balanced_accuracy_tuned": 0.8826,
+            "f1_macro_tuned": 0.6657
+          },
+          "size_mb": 0.0
+        },
+        "SVM_RBF": {
+          "file": "phq9_SVM_RBF.joblib",
+          "threshold": 0.060543080459430194,
+          "metrics": {
+            "accuracy": 0.9465,
+            "balanced_accuracy": 0.5989,
+            "f1_macro": 0.6347,
+            "roc_auc": 0.9318,
+            "balanced_accuracy_tuned": 0.8677,
+            "f1_macro_tuned": 0.6747
+          },
+          "size_mb": 0.13
+        }
+      },
+      "feature_importances": {
+        "pss_q3": 0.19154,
+        "pss_q2": 0.15401,
+        "isi_q7": 0.10053,
+        "pss_q1": 0.0857,
+        "isi_q1": 0.0849,
+        "isi_q4": 0.07522,
+        "isi_q2": 0.0503,
+        "pss_q7": 0.05021,
+        "pss_q14": 0.036,
+        "isi_q5": 0.0223,
+        "isi_q6": 0.02088,
+        "pss_q6": 0.01597,
+        "pss_q13": 0.01581,
+        "pss_q5": 0.01542,
+        "pss_q11": 0.0143,
+        "pss_q9": 0.0139,
+        "pss_q4": 0.00949,
+        "pss_q8": 0.00932,
+        "pss_q10": 0.00805,
+        "isi_q3": 0.00676,
+        "age": 0.00571,
+        "pss_q12": 0.00526,
+        "drink": 0.00509,
+        "gender": 0.00195,
+        "smoke": 0.00112,
+        "edu": 0.00027
+      },
+      "default_model": "RandomForest"
+    }
+  },
+  "feature_ranges": {
+    "pss_q1": {
+      "min": 1.0,
+      "max": 5.0,
+      "median": 2.0
+    },
+    "pss_q2": {
+      "min": 1.0,
+      "max": 5.0,
+      "median": 1.0
+    },
+    "pss_q3": {
+      "min": 1.0,
+      "max": 5.0,
+      "median": 2.0
+    },
+    "pss_q4": {
+      "min": 1.0,
+      "max": 5.0,
+      "median": 3.0
+    },
+    "pss_q5": {
+      "min": 1.0,
+      "max": 5.0,
+      "median": 3.0
+    },
+    "pss_q6": {
+      "min": 1.0,
+      "max": 5.0,
+      "median": 2.0
+    },
+    "pss_q7": {
+      "min": 1.0,
+      "max": 5.0,
+      "median": 3.0
+    },
+    "pss_q8": {
+      "min": 1.0,
+      "max": 5.0,
+      "median": 2.0
+    },
+    "pss_q9": {
+      "min": 1.0,
+      "max": 5.0,
+      "median": 3.0
+    },
+    "pss_q10": {
+      "min": 1.0,
+      "max": 5.0,
+      "median": 3.0
+    },
+    "pss_q11": {
+      "min": 1.0,
+      "max": 5.0,
+      "median": 2.0
+    },
+    "pss_q12": {
+      "min": 1.0,
+      "max": 5.0,
+      "median": 3.0
+    },
+    "pss_q13": {
+      "min": 1.0,
+      "max": 5.0,
+      "median": 3.0
+    },
+    "pss_q14": {
+      "min": 1.0,
+      "max": 5.0,
+      "median": 2.0
+    },
+    "isi_q1": {
+      "min": 0.0,
+      "max": 4.0,
+      "median": 0.0
+    },
+    "isi_q2": {
+      "min": 0.0,
+      "max": 4.0,
+      "median": 0.0
+    },
+    "isi_q3": {
+      "min": 0.0,
+      "max": 4.0,
+      "median": 0.0
+    },
+    "isi_q4": {
+      "min": 0.0,
+      "max": 4.0,
+      "median": 0.0
+    },
+    "isi_q5": {
+      "min": 0.0,
+      "max": 4.0,
+      "median": 0.0
+    },
+    "isi_q6": {
+      "min": 0.0,
+      "max": 4.0,
+      "median": 0.0
+    },
+    "isi_q7": {
+      "min": 0.0,
+      "max": 4.0,
+      "median": 0.0
+    },
+    "gender": {
+      "min": 0.0,
+      "max": 1.0,
+      "median": 0.0
+    },
+    "age": {
+      "min": 1.0,
+      "max": 99.0,
+      "median": 20.0
+    },
+    "edu": {
+      "min": 0.0,
+      "max": 3.0,
+      "median": 1.0
+    },
+    "smoke": {
+      "min": 0.0,
+      "max": 3.0,
+      "median": 2.0
+    },
+    "drink": {
+      "min": 0.0,
+      "max": 3.0,
+      "median": 3.0
+    }
+  },
+  "categorical_levels": {
+    "gender": [
+      0,
+      1
+    ],
+    "edu": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "smoke": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "drink": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "categorical_labels": {
+    "gender": {
+      "0": "female",
+      "1": "male"
+    },
+    "edu": {
+      "0": "associate degree",
+      "1": "bachelor's degree",
+      "2": "doctorate degree",
+      "3": "master's degree"
+    },
+    "smoke": {
+      "0": "current smoker (cumulative smoking >10 packs)",
+      "1": "former smoker (cumulative smoking >10 packs), but not in the past year",
+      "2": "never smokes",
+      "3": "occasional smoker (cumulative smoking <10 packs)"
+    },
+    "drink": {
+      "0": "current regular drinker (more than once a week)",
+      "1": "drank in the past (more than once a week), but not in the past year",
+      "2": "drinks occasionally (less than once a week)",
+      "3": "never drinks"
+    }
+  },
+  "sklearn_version": "1.6.1"
+}
